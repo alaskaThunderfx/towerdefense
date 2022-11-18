@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 1_BFGrass03
   m_Shader: {fileID: 4800000, guid: 7cd5d6fe2c6238e469561875c01946f3, type: 3}
-  m_ShaderKeywords: USE_CS USE_S USE_SC
+  m_ShaderKeywords: USE_CS USE_PR USE_S USE_SC USE_SS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -86,49 +86,50 @@ Material:
     - _DstBlend: 0
     - _FadeAmplitude: 28
     - _FadeDistance: 16
-    - _FadeDistanceEnd: 60
-    - _FadeDistanceStart: 40
+    - _FadeDistanceEnd: 2000
+    - _FadeDistanceStart: 1000
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GrassCut: 0
+    - _GrassCut: 1
     - _GrassSaturation: 1.5
     - _GrassShading: 0.182
-    - _GrassThinness: 0.86
+    - _GrassThinness: 1.03
     - _GrassThinnessIntersection: 1.72
     - _LightIntensity: 1
     - _Metallic: 0
-    - _MinimumNumberStacks: 2
+    - _MinimumNumberStacks: 17
     - _Mode: 0
     - _NearCameraSmoosh: 0.5
     - _NoisePower: 4
     - _NumberOfStacks: 17
     - _OcclusionStrength: 1
-    - _OffsetValue: 0.84
+    - _OffsetValue: 0.74
     - _Parallax: 0.02
     - _ProceduralDistance: 10
     - _ProceduralStrength: 5
     - _RTEffect: 0
-    - _RimMax: 0.591
-    - _RimMin: 0.11
+    - _RimMax: 1
+    - _RimMin: 0
     - _RimPower: 3.15
     - _ShadowFuziness: 1
     - _ShadowMax: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TilingN1: 2.46
+    - _TilingN1: 1.62
     - _TilingN2: 0.05
     - _TilingN3: 0.4
     - _UVSec: 0
     - _UseAmbientLight: 0
     - _UseCS: 1
-    - _UsePR: 0
+    - _UsePR: 1
     - _UseRT: 0
     - _UseShadow: 1
     - _UseShadowCast: 1
-    - _UseSuperStack: 0
+    - _UseSuperStack: 1
     - _UseTP: 0
+    - _UseVP: 0
     - _UseVR: 0
     - _UseWC: 0
     - _WindForce: 0.3
@@ -146,3 +147,4 @@ Material:
     - _ProjectedShadowColor: {r: 0.4509804, g: 0.23375352, b: 0.04313725, a: 1}
     - _RimColor: {r: 0.277, g: 0.25819692, b: 0.1355532, a: 1}
     - _SelfShadowColor: {r: 0.385, g: 0.36869615, b: 0.09009001, a: 1}
+  m_BuildTextureStacks: []

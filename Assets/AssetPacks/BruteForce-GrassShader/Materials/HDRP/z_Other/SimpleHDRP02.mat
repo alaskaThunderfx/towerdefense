@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SimpleHDRP02
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
+  m_Shader: {fileID: 4800000, guid: 7cd5d6fe2c6238e469561875c01946f3, type: 3}
+  m_ShaderKeywords: USE_CS USE_RT USE_S USE_SC _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -61,11 +61,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Distortion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DistortionVectorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GroundTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -86,6 +98,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoGrassTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -174,6 +194,13 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
+    - _FadeDistanceEnd: 26
+    - _FadeDistanceStart: 16
+    - _GrassCut: 0
+    - _GrassSaturation: 2
+    - _GrassShading: 0.197
+    - _GrassThinness: 0.4
+    - _GrassThinnessIntersection: 0.43
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -187,18 +214,29 @@ Material:
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
+    - _LightIntensity: 1
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0.5
+    - _MinimumNumberStacks: 2
+    - _NearCameraSmoosh: 0.5
+    - _NoisePower: 2
     - _NormalMapSpace: 0
     - _NormalScale: 1
+    - _NumberOfStacks: 12
+    - _OffsetValue: 1
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
+    - _ProceduralDistance: 5.5
+    - _ProceduralStrength: 1.5
     - _ReceivesSSR: 1
     - _RefractionModel: 0
+    - _RimMax: 0.62
+    - _RimMin: 0.241
+    - _RimPower: 3.14
     - _SSRefractionProjectionModel: 0
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
@@ -223,6 +261,9 @@ Material:
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
     - _Thickness: 1
+    - _TilingN1: 6.06
+    - _TilingN2: 0.05
+    - _TilingN3: 1
     - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
@@ -234,8 +275,23 @@ Material:
     - _UVBase: 0
     - _UVDetail: 0
     - _UVEmissive: 0
+    - _UseAmbientLight: 0
+    - _UseCS: 1
     - _UseEmissiveIntensity: 0
+    - _UsePR: 0
+    - _UseRT: 1
+    - _UseShadow: 1
+    - _UseShadowCast: 1
     - _UseShadowThreshold: 0
+    - _UseSuperStack: 0
+    - _UseTP: 0
+    - _UseVP: 0
+    - _UseVR: 0
+    - _UseWC: 0
+    - _WindForce: 0.35
+    - _WindMovement: 0.55
+    - _WorldRotation: 0
+    - _WorldScale: 10
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 4
@@ -250,11 +306,17 @@ Material:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
+    - _GroundColor: {r: 0.7, g: 0.68, b: 0.68, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _OffsetVector: {r: 0, g: 0, b: 0, a: 1}
+    - _ProjectedShadowColor: {r: 0.45, g: 0.41999996, b: 0.04, a: 1}
+    - _RimColor: {r: 0.13999996, g: 0.17999998, b: 0.089999996, a: 1}
+    - _SelfShadowColor: {r: 0.40999997, g: 0.40999997, b: 0.35999998, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
