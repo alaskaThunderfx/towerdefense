@@ -9,6 +9,10 @@ public class Waypoint : MonoBehaviour
 
     [SerializeField]
     bool isPlacable;
+    public bool IsPlacable
+    {
+        get { return isPlacable; }
+    }
 
     void OnMouseDown()
     {
