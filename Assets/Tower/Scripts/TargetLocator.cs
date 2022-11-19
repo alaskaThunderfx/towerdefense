@@ -7,6 +7,7 @@ public class TargetLocator : MonoBehaviour
 {
     [SerializeField]
     Transform weapon;
+    Transform target;
     
     void Start()
     {
