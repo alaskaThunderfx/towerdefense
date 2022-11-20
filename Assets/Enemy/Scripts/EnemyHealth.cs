@@ -30,7 +30,6 @@ public class EnemyHealth : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         ProcessHit();
-        Debug.Log("Hit target");
     }
 
     void ProcessHit()
