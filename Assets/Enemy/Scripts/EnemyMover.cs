@@ -60,6 +60,9 @@ public class EnemyMover : MonoBehaviour
             }
         }
 
+        if (!enemy)
+            yield break;
+
         enemy.StealGold();
         gameObject.SetActive(false);
     }
