@@ -37,9 +37,9 @@ public class EnemyHealth : MonoBehaviour
         currentHP--;
         if (currentHP <= 0)
         {
-            gameObject.SetActive(false);
             maxHP += difficultyRamp;
             enemy.RewardGold();
+            gameObject.SetActive(false);
         }
     }
 }

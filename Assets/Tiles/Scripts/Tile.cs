@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoint : MonoBehaviour
+public class Tile : MonoBehaviour
 {
     [SerializeField]
     Tower towerPrefab;
@@ -19,16 +19,35 @@ public class Waypoint : MonoBehaviour
         get { return isPlacable; }
     }
 
+    GridManager gridManager;
+
+    Vector2Int coordinates = new Vector2Int();
+
     Renderer hoverOver;
 
     [SerializeField]
-    Material placeable;
+    Material placeableMaterial;
 
     [SerializeField]
-    Material notPlaceable;
+    Material notPlaceableMaterial;
+
+    void Awake()
+    {
+        gridManager = FindObjectOfType<GridManager>();
+    }
 
     void Start()
     {
+        if (gridManager != null) 
+        {
+            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
+
+            if (!isPlacable)
+            {
+                gridManager.BlockNode(coordinates);
+            }
+        }
+
         hoverOver = transform.GetChild(2).GetComponent<MeshRenderer>();
         HoverOverMaterialPicker();
         hoverOver.enabled = false;
@@ -57,11 +76,11 @@ public class Waypoint : MonoBehaviour
     {
         if (IsPlacable)
         {
-            hoverOver.material = placeable;
+            hoverOver.material = placeableMaterial;
         }
         else
         {
-            hoverOver.material = notPlaceable;
+            hoverOver.material = notPlaceableMaterial;
         }
     }
 }
