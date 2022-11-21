@@ -1,17 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-guid: 60ef452d90dfdaa458b07e5875ef14c2
-=======
 guid: 510635e14a51ddc428eaf461a3985aad
->>>>>>> waypoint
-=======
-<<<<<<<< HEAD:Assets/Tiles/Scripts.meta
-guid: 34e49ca6259c8dd42b7e8a6694f92d35
-========
-guid: 510635e14a51ddc428eaf461a3985aad
->>>>>>>> waypoint:Assets/Enemy/Scripts.meta
->>>>>>> waypoint
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

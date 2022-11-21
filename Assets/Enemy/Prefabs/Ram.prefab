@@ -90,14 +90,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5672325927823913723}
-<<<<<<< HEAD
-  - component: {fileID: 4022003029296347140}
-=======
   - component: {fileID: 5639877294900971158}
   - component: {fileID: 4022003029296347140}
   - component: {fileID: 1002297450680035371}
   - component: {fileID: 3215249290633607918}
->>>>>>> waypoint
   m_Layer: 0
   m_Name: Ram
   m_TagString: Untagged
@@ -120,8 +116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!65 &5639877294900971158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135,7 +129,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.2034693, y: 4.4627867, z: 5.1295214}
   m_Center: {x: -0.009292126, y: 2.1947732, z: 0.009262562}
->>>>>>> waypoint
 --- !u!114 &4022003029296347140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,8 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: []
-<<<<<<< HEAD
-=======
   speed: 1.5
 --- !u!114 &1002297450680035371
 MonoBehaviour:
@@ -180,4 +171,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldReward: 25
   goldPenalty: 25
->>>>>>> waypoint

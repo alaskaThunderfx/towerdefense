@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
---- !u!1 &3511052339968842265
-=======
 --- !u!1 &794075355620413421
->>>>>>> waypoint
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,45 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 5624975036658714914}
-  - component: {fileID: 7410888287547142248}
-  - component: {fileID: 6340357454491718908}
-  m_Layer: 0
-  m_Name: Mesh
-=======
   - component: {fileID: 5761552020043246605}
   - component: {fileID: 7404168844914115975}
   - component: {fileID: 334789883844968957}
   m_Layer: 0
   m_Name: Hover Over
->>>>>>> waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!4 &5624975036658714914
-=======
 --- !u!4 &5761552020043246605
->>>>>>> waypoint
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 3511052339968842265}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.25, y: 6.25, z: 6.25}
-  m_Children: []
-  m_Father: {fileID: 3447369264114970559}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7410888287547142248
-=======
   m_GameObject: {fileID: 794075355620413421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.65, z: 0}
@@ -60,28 +33,19 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7404168844914115975
->>>>>>> waypoint
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 3511052339968842265}
-  m_Mesh: {fileID: -2432090755550338912, guid: 5076ba01f21af0c4daff73ab13dba476, type: 3}
---- !u!23 &6340357454491718908
-=======
   m_GameObject: {fileID: 794075355620413421}
   m_Mesh: {fileID: -2432090755550338912, guid: 5076ba01f21af0c4daff73ab13dba476, type: 3}
 --- !u!23 &334789883844968957
->>>>>>> waypoint
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
   m_GameObject: {fileID: 794075355620413421}
   m_Enabled: 0
   m_CastShadows: 1
@@ -163,7 +127,6 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
->>>>>>> waypoint
   m_GameObject: {fileID: 3511052339968842265}
   m_Enabled: 1
   m_CastShadows: 1
@@ -230,10 +193,7 @@ Transform:
   m_Children:
   - {fileID: 4601358316522844808}
   - {fileID: 5624975036658714914}
-<<<<<<< HEAD
-=======
   - {fileID: 5761552020043246605}
->>>>>>> waypoint
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -374,13 +334,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-<<<<<<< HEAD
-    rgba: 4278201343
-  m_fontColor: {r: 1, g: 0.16705313, b: 0, a: 1}
-=======
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> waypoint
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -7,13 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
-=======
     - target: {fileID: 732412593451056219, guid: 9aa79c5d13f9f8e4ab4f9bd01db7ae22, type: 3}
       propertyPath: isPlacable
       value: 0
       objectReference: {fileID: 0}
->>>>>>> waypoint
     - target: {fileID: 3447369264114970559, guid: 9aa79c5d13f9f8e4ab4f9bd01db7ae22, type: 3}
       propertyPath: m_RootOrder
       value: 0
