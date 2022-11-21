@@ -7,7 +7,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
-    int maxHP = 5;
+    int maxHP = 2;
 
     [Tooltip("Adds amount to max HP when enemy dies.")]
     [SerializeField]

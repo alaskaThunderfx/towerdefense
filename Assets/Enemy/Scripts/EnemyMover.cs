@@ -10,7 +10,7 @@ public class EnemyMover : MonoBehaviour
 
     [SerializeField]
     [Range(0f, 5f)]
-    float speed = 1f;
+    float speed = 1.5f;
 
     Enemy enemy;
 

@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class Bank : MonoBehaviour
 {
+    [SerializeField]
+    GameObject winTextObject;
+    [SerializeField]
+    GameObject playAgainButton;
+
     [SerializeField]
     int startingBalance = 150;
 
@@ -17,6 +23,7 @@ public class Bank : MonoBehaviour
         {
             currentBalance = value;
             UpdateDisplay();
+            WinSequence();
         }
         get { return currentBalance; }
     }
@@ -40,7 +47,6 @@ public class Bank : MonoBehaviour
 
         if (CurrentBalance < 0)
         {
-            // Lose the game.
             ReloadScene();
         }
     }
@@ -50,9 +56,24 @@ public class Bank : MonoBehaviour
         displayBalance.text = $"Gold: {CurrentBalance}";
     }
 
-    void ReloadScene()
+    public void ReloadScene()
     {
+        SetWinObjects(false);
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
+    }
+
+    void WinSequence()
+    {
+        if (currentBalance >= 500)
+        {
+            SetWinObjects(true);
+        }
+    }
+
+    private void SetWinObjects(bool tOrF)
+    {
+        winTextObject.SetActive(tOrF);
+        playAgainButton.SetActive(tOrF);
     }
 }
