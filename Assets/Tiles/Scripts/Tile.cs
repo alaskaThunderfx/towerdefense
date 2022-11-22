@@ -49,21 +49,21 @@ public class Tile : MonoBehaviour
             }
         }
 
-        // hoverOver = transform.GetChild(2).GetComponent<MeshRenderer>();
-        // HoverOverMaterialPicker();
-        // hoverOver.enabled = false;
+        hoverOver = transform.GetChild(2).GetComponent<MeshRenderer>();
+        HoverOverMaterialPicker();
+        hoverOver.enabled = false;
     }
 
-    // void OnMouseOver()
-    // {
-    //     HoverOverMaterialPicker();
-    //     hoverOver.enabled = true;
-    // }
+    void OnMouseOver()
+    {
+        HoverOverMaterialPicker();
+        hoverOver.enabled = true;
+    }
 
-    // void OnMouseExit()
-    // {
-    //     hoverOver.enabled = false;
-    // }
+    void OnMouseExit()
+    {
+        hoverOver.enabled = false;
+    }
 
     void OnMouseDown()
     {
@@ -71,7 +71,7 @@ public class Tile : MonoBehaviour
         {
             bool isSuccessful = towerPrefab.CreateTower(towerPrefab, transform.position);
             // Need to come up with something else for the OoverOverMaterialPicker
-            // IsPlacable = !isPlaced;
+            IsPlacable = !isSuccessful;
             if (isSuccessful)
             {
                 gridManager.BlockNode(coordinates);
@@ -80,16 +80,16 @@ public class Tile : MonoBehaviour
         }
     }
 
-    // void HoverOverMaterialPicker()
-    // {
+    void HoverOverMaterialPicker()
+    {
         
-    //     if (IsPlacable)
-    //     {
-    //         hoverOver.material = placeableMaterial;
-    //     }
-    //     else
-    //     {
-    //         hoverOver.material = notPlaceableMaterial;
-    //     }
-    // }
+        if (IsPlacable)
+        {
+            hoverOver.material = placeableMaterial;
+        }
+        else
+        {
+            hoverOver.material = notPlaceableMaterial;
+        }
+    }
 }
