@@ -7,9 +7,17 @@ public class Pathfinder : MonoBehaviour
 {
     [SerializeField]
     Vector2Int startCoordinates;
+    public Vector2Int StartCoordinates
+    {
+        get { return startCoordinates; }
+    }
 
     [SerializeField]
     Vector2Int destinationCoordinates;
+    public Vector2Int DestinationCoordinates
+    {
+        get { return destinationCoordinates; }
+    }
 
     Node startNode;
     Node destinationNode;
@@ -19,7 +27,6 @@ public class Pathfinder : MonoBehaviour
     Dictionary<Vector2Int, Node> reached = new Dictionary<Vector2Int, Node>();
 
     Vector2Int[] directions = { Vector2Int.right, Vector2Int.left, Vector2Int.up, Vector2Int.down };
-
     GridManager gridManager;
     Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
 
@@ -29,24 +36,41 @@ public class Pathfinder : MonoBehaviour
         if (gridManager != null)
         {
             grid = gridManager.Grid;
+            startNode = grid[startCoordinates];
+            destinationNode = grid[destinationCoordinates];
         }
     }
 
     void Start()
     {
-        startNode = gridManager.Grid[startCoordinates];
-        destinationNode = gridManager.Grid[destinationCoordinates];
-
-        BreadthFirstSearch();
-        BuildPath();
+        GetNewPath();
     }
 
-    void BreadthFirstSearch()
+    public List<Node> GetNewPath()
     {
+        return GetNewPath(startCoordinates);
+    }
+
+    public List<Node> GetNewPath(Vector2Int coordinates)
+    {
+
+        gridManager.ResetNodes();
+        BreadthFirstSearch(coordinates);
+        return BuildPath();
+    }
+
+    void BreadthFirstSearch(Vector2Int coordinates)
+    {
+        startNode.isWalkable = true;
+        destinationNode.isWalkable = true;
+
+        frontier.Clear();
+        reached.Clear();
+
         bool isRunning = true;
 
-        frontier.Enqueue(startNode);
-        reached.Add(startCoordinates, startNode);
+        frontier.Enqueue(grid[coordinates]);
+        reached.Add(coordinates, grid[coordinates]);
 
         while (frontier.Count > 0 && isRunning)
         {
@@ -102,5 +126,30 @@ public class Pathfinder : MonoBehaviour
                 frontier.Enqueue(neighbor);
             }
         }
+    }
+
+    public bool WillBlockPath(Vector2Int coordinates)
+    {
+        if (grid.ContainsKey(coordinates))
+        {
+            bool previousState = grid[coordinates].isWalkable;
+
+            grid[coordinates].isWalkable = false;
+            List<Node> newPath = GetNewPath();
+            grid[coordinates].isWalkable = previousState;
+
+            if (newPath.Count <= 1)
+            {
+                GetNewPath();
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void NotifyReceivers()
+    {
+        BroadcastMessage("RecalculatePath", false, SendMessageOptions.DontRequireReceiver);
     }
 }
