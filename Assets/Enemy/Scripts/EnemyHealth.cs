@@ -13,6 +13,9 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     int difficultyRamp = 1;
 
+    [SerializeField]
+    GameObject boltHit;
+
     int currentHP = 0;
 
     Enemy enemy;
@@ -34,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
 
     void ProcessHit()
     {
+        GameObject hit = Instantiate(boltHit, transform.position, Quaternion.identity);
         currentHP--;
         if (currentHP <= 0)
         {

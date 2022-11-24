@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 2
   difficultyRamp: 1
+  boltHit: {fileID: 6309161711622325456, guid: 925cc8f21a073d24c8324c6ab319dc24, type: 3}
 --- !u!114 &3215249290633607918
 MonoBehaviour:
   m_ObjectHideFlags: 0
